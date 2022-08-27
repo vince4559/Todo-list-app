@@ -10,6 +10,7 @@ const AddTask = ({addTask}) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     if(!text){
+      // using toast to alert user when text input is empty
       toast({
         position:'top',
         title:'Add Task',
@@ -32,14 +33,14 @@ const AddTask = ({addTask}) => {
         <VStack p={5} mx={10}>
           <FormControl >
             <FormLabel>Task</FormLabel>
-            <Input type={'text'} 
+            <Input type={'text'} variant='filled'
               value={text}
               onChange={e => setText(e.target.value)}
               placeholder={'add task'} />
           </FormControl>
           <FormControl >
             <FormLabel>Date & Time</FormLabel>
-            <Input type={'text'} 
+            <Input type={'text'} variant='filled'
               value={date}
               onChange={e => setDate(e.target.value)}
               placeholder={'date & time'} />
